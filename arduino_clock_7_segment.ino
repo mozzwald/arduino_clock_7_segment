@@ -65,7 +65,7 @@ boolean ampm = 1; // Dot for AM / PM
 int menuDisplay = 0; // Menu item to display
 int maxMenu = 2; // Highest menu item
 int brightness = 7; // Set default brightness
-int startDelay = 0; // Menu delay counter
+long startDelay = 0; // Menu delay counter
 int menuDelay = 5000; // Milliseconds delay before exiting option menu
 DateTime now; // Holds the current time
 
@@ -239,6 +239,7 @@ void loop(){
       // Menu timeout, go back to time mode
       optMode = 0;
       timeMode = 1;
+      startDelay = 0;
     }
   }
 
